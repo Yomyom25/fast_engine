@@ -1,3 +1,23 @@
+.div-add , .icon{
+    max-width: 100px;
+    margin: auto;
+}
+
+.div-add img ,.icon img {
+    width: 100%;
+    height: auto;
+}
+
+.div-add a {
+    background: none;
+    text-decoration: none;
+}
+
+.div-add a:hover {
+    background: none;
+    text-decoration: none;
+}
+
 .tabla-usuarios {
     width: 100%;
     border-collapse: collapse;
@@ -15,8 +35,8 @@
 }
 
 .tabla-usuarios th {
-    background-color: var(--color); /* usa el color amarillo definido en tus variables */
-    color: var(--colorBlack);
+    background-color: var(--color3); /* usa el color amarillo definido en tus variables */
+    color: var(--colorWhite);
     font-weight: bold;
 }
 
@@ -52,4 +72,11 @@
 
 .add-user:hover {
     background-color: var(--color2);
+}
+
+/* vista */
+.text-bold {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--color3);
 }

@@ -1,0 +1,55 @@
+.tabla-usuarios {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background-color: var(--colorWhite);
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.tabla-usuarios th, .tabla-usuarios td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.tabla-usuarios th {
+    background-color: var(--color); /* usa el color amarillo definido en tus variables */
+    color: var(--colorBlack);
+    font-weight: bold;
+}
+
+.tabla-usuarios tr:nth-child(even) {
+    background-color: #f9f9f9; /* alternar colores de filas */
+}
+
+.tabla-usuarios tr:hover {
+    background-color: #eaeaea; /* color al pasar el mouse */
+}
+
+.img-tabla {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.img-tabla:hover {
+    transform: scale(1.2);
+}
+
+/* botón crear usuario */
+.add-user {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: var(--color3);
+    color: var(--colorWhite);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.add-user:hover {
+    background-color: var(--color2);
+}

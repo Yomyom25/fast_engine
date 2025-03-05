@@ -1,3 +1,7 @@
+<?php 
+require "seguridad.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,7 +14,6 @@
 </head>
 
 <body>
-    <?php include 'seguridad.php' ?>
     <div class="div-1200px">
         <div class="div-flex">
             <div class="container">
@@ -31,7 +34,7 @@
                                     require "conn.php";
 
                                     $id_usuario = $_GET["id"];
-                                    $todos = "SELECT * FROM usuarios WHERE ID = '$id_usuario' ";
+                                    $todos = "SELECT * FROM usuarios WHERE ID_usuario = '$id_usuario' ";
 
                                     $resultado = mysqli_query($conectar, $todos);
 
@@ -57,7 +60,7 @@
                             <div class="content1">
                                 <div class="btn icon">
                                     <h2 class="main-subtitulo">Editar usuario</h2>
-                                    <a  href="editar-usuario.php?id=<?php echo $fila['ID']; ?>">
+                                    <a  href="editar-usuario.php?id=<?php echo $fila['ID_usuario']; ?>">
                                         <img src="img/edit.png" alt="">
                                     </a>
                                 </div>

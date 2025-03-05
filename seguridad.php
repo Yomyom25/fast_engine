@@ -5,7 +5,7 @@ if ($_SESSION ["autentificado"] != "SI") {
     }  else {
 
 $nombre_cookie = "tiempo_inicio";
-$tiempo_expiracion = 1000;
+$tiempo_expiracion = 100;
 
 setcookie($nombre_cookie, time(), time() + $tiempo_expiracion, "/");
 function verificarTiempoCookie ($nombre_cookie, $tiempo_expiracion)

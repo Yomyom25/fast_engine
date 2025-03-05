@@ -31,7 +31,7 @@ include 'seguridad.php';
                         require "conn.php";
                         $id_usuario = $_GET["id"];
 
-                        $todos = "SELECT * FROM usuarios WHERE ID = '$id_usuario' ";
+                        $todos = "SELECT * FROM usuarios WHERE ID_usuario = '$id_usuario' ";
                         $resultado = mysqli_query($conectar, $todos);
                         $fila = $resultado->fetch_array();
                         ?>
@@ -39,34 +39,45 @@ include 'seguridad.php';
                             <h1 class="main-titulo">Editar usuario</h1>
                             <div class="div-usuarios">
 
-                                <div class="form-container">
-                                    <form action="guardar-editar_usuario.php" method="post">
+                                <div class="div-contenedor">
+                                    <div class="div-form">
+                                        <form action="guardar-editar-usuario.php" method="post">
+                                            <div class="input-update">
+                                                <input class="input-form" value="<?php echo $fila['nombre'] ?>" type="text" name="nombre" placeholder="Nombre(s)">
+                                                <input class="input-form" value="<?php echo $fila['apellido'] ?>" type="text" name="apellido" placeholder="Apellido">
+                                            </div>
 
-                                        <input class="input-login ancho-uniforme" value="<?php echo $fila['nombre'] ?>" type="text" name="nombre" placeholder="Nombre(s)">
-                                        <input class="input-login ancho-uniforme" value="<?php echo $fila['apellido'] ?>" type="text" name="apellido" placeholder="Apellido">
+                                            <div class="input-update">
+                                                <div class="correo">
+                                                    <?php echo $fila['email'] ?>
+                                                </div>
 
-                                        <div class="input-login correo">
-                                            <?php echo $fila['email'] ?>
-                                        </div>
+                                            </div>
+                                            <br>
+                                            <div class="input-update">
+                                                <input type="hidden" name="id" value="<?php echo $fila["ID_usuario"]; ?>">
+                                                <input type="hidden" name="email" value="<?php echo $fila["email"]; ?>">
+                                                <input type="hidden" name="contrasena" value="<?php echo $fila["contrasena"]; ?>">
 
-                                        <!-- <div class="input-login correo">
-                            <?php echo $fila['contrasena'] ?>
-                        </div> -->
+                                            </div>
+                                            <p class="entrada-label" for="birthdate">Fecha de nacimiento:</p>
+                                            <input class="input-form" value="<?php echo $fila['fecha_nacimiento'] ?>" type="date" name="fecha_nacimiento" required>
 
-                                        <p class="entrada-label" for="birthdate">Fecha de nacimiento:</p>
-                                        <input class="input-login ancho-uniforme" value="<?php echo $fila['fecha_nacimiento'] ?>" type="date" name="fecha_nacimiento" required>
+                                            <div class="div-btn">
+                                                <button class="update-btn" type="submit" value=>Actualizar</button>
+                                            </div>
 
-                                        <input type="hidden" name="id" value="<?php echo $fila["ID"]; ?>">
-                                        <input type="hidden" name="email" value="<?php echo $fila["email"]; ?>">
-                                        <button class="btn-cuenta ancho-uniforme entrada-label" type="submit" value=>Actualizar</button>
-                                    </form>
+                                        </form>
+                                    </div>
                                 </div>
+
+
                             </div>
                         </div>
                         <div class="content2">
                             <h2 class="main-subtitulo">Regresar</h2>
                             <div class="div-add">
-                                <a href="ver-usuario.php?id=<?php echo $fila["ID"]; ?>">
+                                <a href="ver-usuario.php?id=<?php echo $fila["ID_usuario"]; ?>">
                                     <img src="img/back.png" alt="">
                                 </a>
                             </div>

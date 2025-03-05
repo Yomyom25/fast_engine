@@ -1,3 +1,19 @@
+:root {
+    --color1: #ccc;
+    --colorWhite: #ffff;
+    --colorBlack: #202131;
+    --colorHover: #3D3D3D;
+    --color2: #011F26;
+    --color3: #025E73;
+    --color4: #F2A71B;
+    --color5: #BFB78F;
+    --color6: #A5A692;
+    --color7: #84B026;
+    --color8: #D92525;
+    --color9: #C7BEAB;
+}
+
+
 .div-add , .icon{
     max-width: 100px;
     margin: auto;
@@ -80,3 +96,46 @@
     margin-bottom: 10px;
     color: var(--color3);
 }
+
+/* formulario crear usuario */
+.input-form {
+    background-color: var(--colorWhite);
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.correo {
+    background-color: #ccc;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.input-update {
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.update-btn {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: var(--color7);
+    color: var(--colorWhite);
+    border: none;
+    padding: 15px 50px;
+    border-radius: 20px;
+}
+
+.update-btn:hover {
+    color: var(--color7);
+    background-color: var(--colorHover);
+}
+

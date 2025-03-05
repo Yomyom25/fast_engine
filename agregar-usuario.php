@@ -34,18 +34,21 @@ include 'seguridad.php';
                                     <div class="div-form">
                                         <form action="guardar-usuario.php" method="post">
 
-                                            <input class="" type="text" id="name" name="nombre" placeholder="Nombre(s)">
+                                            <input class="input-form" type="text" id="name" name="nombre" placeholder="Nombre(s)">
 
-                                            <input class="" type="text" id="last_name" name="apellido" placeholder="Apellido">
+                                            <input class="input-form" type="text" id="last_name" name="apellido" placeholder="Apellido">
 
-                                            <input class="" type="email" id="email" name="email" placeholder="Correo electronico">
+                                            <input class="input-form" type="email" id="email" name="email" placeholder="Correo electronico">
 
-                                            <input class="" type="text" id="password" name="contrasena" placeholder="contraseña" maxlength="10">
+                                            <input class="input-form" type="text" id="password" name="contrasena" placeholder="contraseña" maxlength="10">
 
                                             <p class="" for="birthdate">Fecha de nacimiento:</p>
-                                            <input class="" type="date" id="birthdate" name="fecha_nacimiento" required>
+                                            <input class="input-form" type="date" id="birthdate" name="fecha_nacimiento" required>
 
-                                            <input class="" type="submit" value="registrar">
+                                            <div class="btn-form">
+                                                <input class="update-btn" type="submit" value="Agregar">
+                                            </div>
+
                                         </form>
                                     </div>
                                 </div>

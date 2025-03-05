@@ -83,6 +83,15 @@ body {
     color: white;
 }
 
+.registro {
+    background-color: var(--color7);
+    color: white;
+}
+
+.registro:hover {
+    background-color: #445d0d;
+}
+
 .btn-login:hover {
     background-color: #0056b3;
 }
@@ -99,4 +108,10 @@ body {
     color: var(--color3);
     font-style: italic;
     text-decoration: none;
+}
+
+.text-small {
+    color: var(--color2);
+    font-size: 12px;
+    margin: 20px 0;
 }

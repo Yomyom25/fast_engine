@@ -2,9 +2,10 @@
 
 require "seguridad.php";
 require "conn.php";
+
 $id_usuario = $_GET["id"];
 
-$eliminar = "DELETE FROM usuarios WHERE ID = '$id_usuario'";
+$eliminar = "DELETE FROM usuarios WHERE ID_usuario = '$id_usuario'";
 $resultado = mysqli_query($conectar, $eliminar);
 
 if ($resultado) {

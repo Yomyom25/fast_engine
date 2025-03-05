@@ -44,18 +44,18 @@ include 'seguridad.php';
                                     <?php
                                     require "conn.php";
 
-                                    $todos = "SELECT * FROM usuarios ORDER BY id ASC";
+                                    $todos = "SELECT * FROM usuarios ORDER BY ID_usuario ASC";
                                     $resultado = mysqli_query($conectar, $todos);
                                     while ($fila = $resultado->fetch_array()) {
                                     ?>
                                         <tr>
-                                            <td><?php echo $fila["ID"] ?></td>
+                                            <td><?php echo $fila["ID_usuario"] ?></td>
                                             <td><?php echo $fila["nombre"] ?></td>
                                             <td><?php echo $fila["apellido"] ?></td>
                                             <td><?php echo $fila["email"] ?></td>
-                                            <td><a href="ver-usuario.php?id=<?php echo $fila["ID"]; ?>"><img class="img-tabla" src="img/see.png" alt=""></a></td>
-                                            <td><a href="editar-usuario.php?id=<?php echo $fila["ID"]; ?> "><img class="img-tabla" src="img/edit.png" alt=""></a></td>
-                                            <td><a href="#" onClick="validarDelete('eliminar.php?id=<?php echo $fila["ID"]; ?>')"><img class="img-tabla" src="img/delete.png" alt=""></a></td>
+                                            <td><a href="ver-usuario.php?id=<?php echo $fila["ID_usuario"]; ?>"><img class="img-tabla" src="img/see.png" alt=""></a></td>
+                                            <td><a href="editar-usuario.php?id=<?php echo $fila["ID_usuario"]; ?> "><img class="img-tabla" src="img/edit.png" alt=""></a></td>
+                                            <td><a href="#" onClick="validarDelete('eliminar.php?id=<?php echo $fila["ID_usuario"]; ?>')"><img class="img-tabla" src="img/delete.png" alt=""></a></td>
                                         </tr>
                                     <?php } ?>
 

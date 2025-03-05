@@ -1,3 +1,7 @@
+<?php
+require "seguridad.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +13,6 @@
 </head>
 
 <body>
-    <?php include 'seguridad.php' ?>
     <div class="div-1200px">
         <div class="div-flex">
             <div class="container">

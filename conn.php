@@ -2,7 +2,7 @@
 $host = "localhost";
 $user = "root";
 $contrasena = "";
-$bd = "plantilla";
+$bd = "taller";
 
 $conectar = mysqli_connect($host, $user, $contrasena, $bd);
 

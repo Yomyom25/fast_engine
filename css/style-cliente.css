@@ -1,0 +1,45 @@
+.tabla-clientes {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background-color: var(--colorWhite);
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.tabla-clientes th, .tabla-clientes td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.tabla-clientes th {
+    background-color: var(--color3); /* usa el color definido en tus variables */
+    color: var(--colorWhite);
+    font-weight: bold;
+}
+
+.tabla-clientes tr:nth-child(even) {
+    background-color: #f9f9f9; /* alternar colores de filas */
+}
+
+.tabla-clientes tr:hover {
+    background-color: #eaeaea; /* color al pasar el mouse */
+}
+
+/* botón crear cliente */
+.add-cliente {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: var(--color3);
+    color: var(--colorWhite);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.add-cliente:hover {
+    background-color: var(--color2);
+}

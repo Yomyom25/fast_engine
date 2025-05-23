@@ -1,8 +1,8 @@
 <?php
 $host = "localhost";
-$user = "root";
-$contrasena = "";
-$bd = "taller";
+$user = "jyanmx_yom";
+$contrasena = "g_8!yu(,8(R3";
+$bd = "jyanmx_taller_yomara";
 
 $conectar = mysqli_connect($host, $user, $contrasena, $bd);
 

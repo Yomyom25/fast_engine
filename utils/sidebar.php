@@ -11,6 +11,7 @@
             <ul>
                 <li><a href="reportes.php">Reportes</a></li>
                 <li><a href="clientes.php">Clientes</a></li>
+                <li><a href="servicios.php">Servicios</a></li>
                 <li><a href="empleados.php">Empleados</a></li>
                 <li><a href="usuarios.php">Usuarios</a></li>
             </ul>

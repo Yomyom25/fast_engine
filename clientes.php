@@ -49,14 +49,14 @@ include 'seguridad.php';
                                     while ($fila = $resultado->fetch_array()) {
                                     ?>
                                         <tr>
-                                            <td><?php echo $fila["ID_Cliente"]; ?></td>
-                                            <td><?php echo $fila["Nombre_Cliente"]; ?></td>
+                                            <td><?php echo $fila["ID_cliente"]; ?></td>
+                                            <td><?php echo $fila["Nombre_cliente"]; ?></td>
                                             <td><?php echo $fila["Empresa"]; ?></td>
                                             <td><?php echo $fila["Telefono"]; ?></td>
                                             <td><?php echo $fila["Correo"]; ?></td>
-                                            <td><a href="ver-cliente.php?id=<?php echo $fila["ID_Cliente"]; ?>"><img class="img-tabla" src="img/see.png" alt=""></a></td>
-                                            <td><a href="editar-cliente.php?id=<?php echo $fila["ID_Cliente"]; ?>"><img class="img-tabla" src="img/edit.png" alt=""></a></td>
-                                            <td><a href="#" onClick="validarDelete('eliminar-cliente.php?id=<?php echo $fila["ID_Cliente"]; ?>')"><img class="img-tabla" src="img/delete.png" alt=""></a></td>
+                                            <td><a href="ver-cliente.php?id=<?php echo $fila["ID_cliente"]; ?>"><img class="img-tabla" src="img/see.png" alt=""></a></td>
+                                            <td><a href="editar-cliente.php?id=<?php echo $fila["ID_cliente"]; ?>"><img class="img-tabla" src="img/edit.png" alt=""></a></td>
+                                            <td><a href="#" onClick="validarDelete('eliminar-cliente.php?id=<?php echo $fila["ID_cliente"]; ?>')"><img class="img-tabla" src="img/delete.png" alt=""></a></td>
                                         </tr>
                                     <?php } ?>
                                 </table>

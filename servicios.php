@@ -34,7 +34,6 @@ include 'seguridad.php';
                                     <tr>
                                         <th class="font-yellow">ID</th>
                                         <th>Nombre</th>
-                                        <th>Descripción</th>
                                         <th class="font-yellow">Ver</th>
                                         <th class="font-yellow">Editar</th>
                                         <th class="font-yellow">Borrar</th>
@@ -49,10 +48,9 @@ include 'seguridad.php';
                                         <tr>
                                             <td><?php echo $fila["ID_servicio"]; ?></td>
                                             <td><?php echo $fila["Nombre_servicio"]; ?></td>
-                                            <td><?php echo $fila["Descripcion"]; ?></td>
                                             <td><a href="ver-servicio.php?id=<?php echo $fila["ID_servicio"]; ?>"><img class="img-tabla" src="img/see.png" alt=""></a></td>
                                             <td><a href="editar-servicio.php?id=<?php echo $fila["ID_servicio"]; ?>"><img class="img-tabla" src="img/edit.png" alt=""></a></td>
-                                            <td><a href="#" onClick="validarDelete('eliminar-servicio.php?id=<?php echo $fila["ID_servicio"]; ?>')"><img class="img-tabla" src="img/delete.png" alt=""></a></td>
+                                            <td><a href="#" onClick="validarDelete('eliminar-servicio.php?id=<?php echo $fila["ID_servicio"]; ?>&tabla=servicios')"><img class="img-tabla" src="img/delete.png" alt=""></a></td>
                                         </tr>
                                     <?php } ?>
                                 </table>

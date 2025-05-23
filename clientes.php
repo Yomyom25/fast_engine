@@ -35,8 +35,7 @@ include 'seguridad.php';
                                         <th class="font-yellow">ID</th>
                                         <th>Nombre</th>
                                         <th>Empresa</th>
-                                        <th>Teléfono</th>
-                                        <th>Correo</th>
+
                                         <th class="font-yellow">Ver</th>
                                         <th class="font-yellow">Editar</th>
                                         <th class="font-yellow">Borrar</th>
@@ -52,11 +51,10 @@ include 'seguridad.php';
                                             <td><?php echo $fila["ID_cliente"]; ?></td>
                                             <td><?php echo $fila["Nombre_cliente"]; ?></td>
                                             <td><?php echo $fila["Empresa"]; ?></td>
-                                            <td><?php echo $fila["Telefono"]; ?></td>
-                                            <td><?php echo $fila["Correo"]; ?></td>
+
                                             <td><a href="ver-cliente.php?id=<?php echo $fila["ID_cliente"]; ?>"><img class="img-tabla" src="img/see.png" alt=""></a></td>
                                             <td><a href="editar-cliente.php?id=<?php echo $fila["ID_cliente"]; ?>"><img class="img-tabla" src="img/edit.png" alt=""></a></td>
-                                            <td><a href="#" onClick="validarDelete('eliminar-cliente.php?id=<?php echo $fila["ID_cliente"]; ?>')"><img class="img-tabla" src="img/delete.png" alt=""></a></td>
+                                            <td><a href="#" onClick="validarDelete('eliminar.php?id=<?php echo $fila["ID_cliente"]; ?>&tabla=clientes')"><img class="img-tabla" src="img/delete.png" alt=""></a></td>
                                         </tr>
                                     <?php } ?>
                                 </table>

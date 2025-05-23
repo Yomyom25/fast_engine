@@ -5,7 +5,7 @@
                 <img src="img/logo_icon.png">
             </a>
         </div>
-        <p class="user">Usuario</p>
+        <p class="user"> <?php echo $_SESSION["username"]; ?></p>
 
         <nav class="menu">
             <ul>

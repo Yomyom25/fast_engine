@@ -56,7 +56,7 @@ include 'seguridad.php';
                                             <td><?php echo $fila["Sexo"]; ?></td>
                                             <td><a href="ver-empleado.php?id=<?php echo $fila["ID_empleado"]; ?>"><img class="img-tabla" src="img/see.png" alt=""></a></td>
                                             <td><a href="editar-empleado.php?id=<?php echo $fila["ID_empleado"]; ?>"><img class="img-tabla" src="img/edit.png" alt=""></a></td>
-                                            <td><a href="#" onClick="validarDelete('eliminar-empleado.php?id=<?php echo $fila["ID_empleado"]; ?>')"><img class="img-tabla" src="img/delete.png" alt=""></a></td>
+                                            <td><a href="#" onClick="validarDelete('eliminar-empleado.php?id=<?php echo $fila["ID_empleado"]; ?>&tabla=empleados')"><img class="img-tabla" src="img/delete.png" alt=""></a></td>
                                         </tr>
                                     <?php } ?>
 

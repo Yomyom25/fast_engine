@@ -31,7 +31,7 @@ include 'seguridad.php';
                             <div class="div-empleados">
                                 <div class="contenedor">
                                     <div class="div-form">
-                                        <form action="guardar-empleado.php" method="post">
+                                        <form action="guardar-empleado.php" method="post" enctype="multipart/form-data">
 
                                             <input class="input-form" type="text" id="name" name="nombre" placeholder="Nombre(s)" required>
 
@@ -46,6 +46,9 @@ include 'seguridad.php';
                                                 <option value="M">Masculino</option>
                                                 <option value="F">Femenino</option>
                                             </select>
+
+                                            <p>Foto del empleado:</p>
+                                            <input type="file" name="foto_emp" id="">
 
                                             <div class="btn-form">
                                                 <input class="update-btn" type="submit" value="Agregar">

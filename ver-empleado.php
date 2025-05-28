@@ -69,6 +69,15 @@ if (isset($_GET['id'])) {
                                         ?>
                                         <hr>
                                     </p>
+
+                                    <!-- Foto del empleado corregida -->
+                                    <?php if(!empty($empleado['ruta_foto'])): ?>
+                                        <p class="text-bold">Foto:</p>
+                                        <img src="<?php echo $empleado['ruta_foto']; ?>" alt="Foto del empleado" style="max-width: 250px; height: auto; margin-bottom: 20px;">
+                                    <?php else: ?>
+                                        <p class="text-bold">Foto:</p>
+                                        <p>No hay foto disponible</p>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                         </div>
@@ -92,12 +101,10 @@ if (isset($_GET['id'])) {
 
                             <?php include 'utils/footer.php'; ?>
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </body>
-
 </html>

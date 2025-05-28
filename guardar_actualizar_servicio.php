@@ -2,28 +2,26 @@
 include 'seguridad.php';
 require 'conn.php';
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $id_servicio = isset($_POST['id_servicio']) ? intval($_POST['id_servicio']) : 0;
-    $nombre_servicio = isset($_POST['nombre_servicio']) ? mysqli_real_escape_string($conectar, trim($_POST['nombre_servicio'])) : '';
-    $descripcion = isset($_POST['descripcion']) ? mysqli_real_escape_string($conectar, trim($_POST['descripcion'])) : '';
+$id_servicio = $_POST['id_servicio'];
+$nombre_servicio = $_POST['nombre_servicio'];
+$descripcion = $_POST['descripcion'];
 
-    if ($id_servicio > 0 && $nombre_servicio !== '' && $descripcion !== '') {
-        $sql = "UPDATE servicios SET 
-                    Nombre_servicio = '$nombre_servicio', 
-                    Descripcion = '$descripcion' 
-                WHERE ID_servicio = $id_servicio";
+// actualizar los datos del servicio
+$actualizar = "UPDATE servicios 
+               SET Nombre_servicio='$nombre_servicio', Descripcion='$descripcion' 
+               WHERE ID_servicio='$id_servicio'";
 
-        if (mysqli_query($conectar, $sql)) {
-            header("Location: servicios.php?msg=actualizado");
-            exit;
-        } else {
-            echo "Error al actualizar el servicio: " . mysqli_error($conectar);
-        }
-    } else {
-        echo "Faltan datos obligatorios.";
-    }
+$query = mysqli_query($conectar, $actualizar);
+
+if ($query) {
+    echo '<script>
+    alert("Servicio actualizado correctamente!");
+    location.href = "servicios.php";
+    </script>';
 } else {
-    header("Location: servicios.php");
-    exit;
+    echo '<script>
+    alert("Error al actualizar el servicio!");
+    history.go(-1);
+    </script>';
 }
 ?>

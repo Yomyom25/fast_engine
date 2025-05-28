@@ -45,7 +45,7 @@ $empleado = $resultado->fetch_assoc();
                             <div class="div-empleados">
                                 <div class="contenedor">
                                     <div class="div-form">
-                                        <form action="guardar_actualizar_empleado.php" method="post">
+                                        <form action="guardar_actualizar_empleado.php" method="post" enctype="multipart/form-data">
                                             <input type="hidden" name="id_empleado" value="<?php echo $empleado['ID_empleado']; ?>">
 
                                             <input class="input-form" type="text" name="nombre" placeholder="Nombre(s)" value="<?php echo htmlspecialchars($empleado['Nombre_empleado']); ?>" required>
@@ -61,6 +61,15 @@ $empleado = $resultado->fetch_assoc();
                                                 <option value="M" <?php echo $empleado['Sexo'] == 'M' ? 'selected' : ''; ?>>Masculino</option>
                                                 <option value="F" <?php echo $empleado['Sexo'] == 'F' ? 'selected' : ''; ?>>Femenino</option>
                                             </select>
+
+                                            <?php if(!empty($empleado['ruta_foto'])): ?>
+                                                <p>Foto actual:</p>
+                                                <img src="<?php echo $empleado['ruta_foto']; ?>" alt="Foto actual del empleado" style="width: 250px; height: auto; margin-bottom: 10px;">
+                                            <?php endif; ?>
+                                            
+                                            <p>Cambiar foto:</p>
+                                            <input type="file" name="foto_emp" id="foto_emp">
+                                            <!-- FIN DE CAMBIOS -->
 
                                             <div class="btn-form">
                                                 <input class="update-btn" type="submit" value="Guardar Cambios">
@@ -85,5 +94,4 @@ $empleado = $resultado->fetch_assoc();
         </div>
     </div>
 </body>
-
 </html>

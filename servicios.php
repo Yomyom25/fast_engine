@@ -50,7 +50,7 @@ include 'seguridad.php';
                                             <td><?php echo $fila["Nombre_servicio"]; ?></td>
                                             <td><a href="ver-servicio.php?id=<?php echo $fila["ID_servicio"]; ?>"><img class="img-tabla" src="img/see.png" alt=""></a></td>
                                             <td><a href="editar-servicio.php?id=<?php echo $fila["ID_servicio"]; ?>"><img class="img-tabla" src="img/edit.png" alt=""></a></td>
-                                            <td><a href="#" onClick="validarDelete('eliminar-servicio.php?id=<?php echo $fila["ID_servicio"]; ?>&tabla=servicios')"><img class="img-tabla" src="img/delete.png" alt=""></a></td>
+                                            <td><a href="#" onClick="validarDelete('eliminar.php?id=<?php echo $fila["ID_servicio"]; ?>&tabla=servicios')"><img class="img-tabla" src="img/delete.png" alt=""></a></td>
                                         </tr>
                                     <?php } ?>
                                 </table>

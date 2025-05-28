@@ -27,7 +27,15 @@ include 'seguridad.php';
 
                     <div class="main-container">
                         <div class="main">
+
                             <h1 class="main-titulo">Clientes</h1>
+
+                            <div class="btn">
+                                <a class="btn-green" href="json-clientes.php">Generar JSON</a>
+
+                                <a class="btn-blue" href="clientes.json">Ver datos</a>
+                            </div>
+
                             <div class="div-clientes">
                                 <!-- Tabla de clientes -->
                                 <table class="tabla-clientes">

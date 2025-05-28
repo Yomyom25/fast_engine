@@ -1,13 +1,13 @@
 <?php
-// $host = "localhost";
-// $user = "root";
-// $contrasena = "";
-// $bd = "taller";
-
 $host = "localhost";
-$user = "jyanmx_yom";
-$contrasena = "g_8!yu(,8(R3";
-$bd = "jyanmx_taller";
+$user = "root";
+$contrasena = "";
+$bd = "taller";
+
+// $host = "localhost";
+// $user = "jyanmx_yom";
+// $contrasena = "g_8!yu(,8(R3";
+// $bd = "jyanmx_taller";
 
 $conectar = mysqli_connect($host, $user, $contrasena, $bd);
 

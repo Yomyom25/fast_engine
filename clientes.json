@@ -1,0 +1,16 @@
+[
+    {
+        "ID_cliente": "0",
+        "Nombre_cliente": "Juanito",
+        "Empresa": "Dogs",
+        "Telefono": "8888888080",
+        "Correo": "juan@gmail.com"
+    },
+    {
+        "ID_cliente": "1",
+        "Nombre_cliente": "cliente test",
+        "Empresa": "esmpresa test",
+        "Telefono": "888888888",
+        "Correo": "correo@gmail.com"
+    }
+]
